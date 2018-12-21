@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 通过一个dom元素中的自定义属性来往组件汇总传参 -->
+    <div id="app">
+        <click message='KamiKaze'></click>
+        <user username='Melo'></user>
+        <user-x username='testOne'></user-x>
+    </div>
+    <div id="app2">
+        <click2 msg='Rap Devil'></click2>
+        <click message='MGK'></click>
+        <user username='MA$IWEI'></user>
+    </div>
+    <!-- END -->
+
+    <!-- 将组件的template写于html文件中的写法 -->
+    <template id="clickme">
+        <button @click='onClick()'>弹弹弹</button>
+    </template>
+    <!-- END -->
+
+    <script src="../../../vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

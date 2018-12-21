@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <span style='display:block'>你的等级:{{2+2}}</span>
+        <input type="text" v-model='name'>
+        <span style='display:block'>你的名字:{{name}}</span>
+        <input type="text" v-model='age'>
+        <span style='display:block' v-show='age'>你的年龄:{{age}}</span>
+        <input type="text" v-model='sex'>
+        <span style='display:block' v-if='sex'>你的性别:{{sex}}</span>
+
+    </div>
+    <!-- 
+
+        v-model: 用来绑定数据到元素上
+        v-show: 控制元素的显示(以隐藏的方式)
+        v-if: 控制元素的显示(不显示就是删除)
+        
+     -->
+
+
+
+
+    <script src="../../vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

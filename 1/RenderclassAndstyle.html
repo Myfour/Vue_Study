@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p :class="{ active:isActive,'text-center':isActive }">TEST</p>
+        <p :class="Classobj">TEST</p>
+    </div>
+    <div id="app2">
+        <p :class="[activeClass,staticClass]">
+            数组语法
+        </p>
+        <p :class="[istrue ? activeClass:'']">
+            数组语法
+        </p>
+    </div>
+    <div id="app3">
+        <p :style="mystyle">内联样式</p>
+        <p :style="[mystyle,mystyle2]">内联样式</p>
+    </div>
+    <script type="text/javascript" src="../vue.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

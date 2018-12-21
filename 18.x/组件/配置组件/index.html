@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <like></like>
+        <like_tmp></like_tmp>
+    </div>
+
+    <!-- 配置组件的template可以写到html中，如下.之后在Vue的component中传入这个template的选择器就ok -->
+    <template id="like-component-tpl">
+        <button @click="toggle_like()">👍{{like}}</button>
+    </template>
+
+    <script src="../../../vue.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 v-if="ok">Yes</h1>
+        <h1 v-else>No</h1>
+        <template v-if="ok">
+            <h1>1</h1>
+            <h2>2</h2>
+            <h3>3</h3>
+        </template>
+        <template v-else>
+            <h4>4</h4>
+            <h5>5</h5>
+            <h6>6</h6>
+        </template>
+    </div>
+
+    <div id="app2">
+        <div v-if="type == 'A'">
+            A
+        </div>
+        <div v-else-if="type == 'B'">
+            B
+        </div>
+        <div v-else-if="type == 'C'">
+            C
+        </div>
+        <div v-else>
+            Not A/B/C
+        </div>
+    </div>
+
+    <div id="app3">
+        <h2 v-show="shouldshow">Show?</h2>
+    </div>
+
+    <div id="app4">
+        <p>{{ items }}</p>
+        <p v-for="item in items">
+            {{ item }}
+        </p>
+        <hr>
+        <p v-for="(item,index) in items">
+            {{index}}--{{item}}
+        </p>
+        <hr>
+        <p v-for="(item,key,index) in myobject">
+            {{index}}:{{key}}-{{item}}
+        </p>
+    </div>
+    <hr>
+    <div id="app5">
+        <ul>
+            <li v-for="item in even">{{ item }}</li>
+        </ul>
+    </div>
+    <hr>
+    <div id="app6">
+        <ul>
+            <li v-for="item in even(list)">{{ item }}</li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="../vue.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
